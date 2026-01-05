@@ -1,0 +1,410 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{73DFBDFB-7BCE-4382-9C5F-FE2B3FA4DCCB}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>SelfcareProject.My.MyApplication</StartupObject>
+    <RootNamespace>SelfcareProject</RootNamespace>
+    <AssemblyName>SelfcareProject</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>SelfcareProject.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>SelfcareProject.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BCrypt.Net-Next, Version=4.0.3.0, Culture=neutral, PublicKeyToken=1e11be04b6288443, processorArchitecture=MSIL">
+      <HintPath>packages\BCrypt.Net-Next.4.0.3\lib\net472\BCrypt.Net-Next.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.SQLite, Version=1.0.119.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.119.0\lib\net46\System.Data.SQLite.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Memory, Version=4.0.1.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Memory.4.5.4\lib\net461\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.4.1, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Runtime.CompilerServices.Unsafe.4.5.3\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AccountCenterCounselor.Designer.vb">
+      <DependentUpon>AccountCenterCounselor.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AccountCenterCounselor.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AccountCenterUser.Designer.vb">
+      <DependentUpon>AccountCenterUser.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AccountCenterUser.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ActivityLog.Designer.vb">
+      <DependentUpon>ActivityLog.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ActivityLog.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChangePassword.Designer.vb">
+      <DependentUpon>ChangePassword.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ChangePassword.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChatRoom.Designer.vb">
+      <DependentUpon>ChatRoom.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ChatRoom.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FindCounselor.Designer.vb">
+      <DependentUpon>FindCounselor.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FindCounselor.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FinanceTracker.Designer.vb">
+      <DependentUpon>FinanceTracker.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FinanceTracker.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IncomingReq.Designer.vb">
+      <DependentUpon>IncomingReq.vb</DependentUpon>
+    </Compile>
+    <Compile Include="IncomingReq.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Journal.Designer.vb">
+      <DependentUpon>Journal.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Journal.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MoodHistory.Designer.vb">
+      <DependentUpon>MoodHistory.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MoodHistory.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MoodTracker.Designer.vb">
+      <DependentUpon>MoodTracker.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MoodTracker.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PairWithCounselor.Designer.vb">
+      <DependentUpon>PairWithCounselor.vb</DependentUpon>
+    </Compile>
+    <Compile Include="PairWithCounselor.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SignIn.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SignIn.Designer.vb">
+      <DependentUpon>SignIn.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Module1.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="SignUp.Designer.vb">
+      <DependentUpon>SignUp.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SignUp.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ToDoHistory.Designer.vb">
+      <DependentUpon>ToDoHistory.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ToDoHistory.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ToDoList.Designer.vb">
+      <DependentUpon>ToDoList.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ToDoList.vb">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="AccountCenterCounselor.resx">
+      <DependentUpon>AccountCenterCounselor.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AccountCenterUser.resx">
+      <DependentUpon>AccountCenterUser.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ActivityLog.resx">
+      <DependentUpon>ActivityLog.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChangePassword.resx">
+      <DependentUpon>ChangePassword.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChatRoom.resx">
+      <DependentUpon>ChatRoom.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FindCounselor.resx">
+      <DependentUpon>FindCounselor.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FinanceTracker.resx">
+      <DependentUpon>FinanceTracker.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IncomingReq.resx">
+      <DependentUpon>IncomingReq.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Journal.resx">
+      <DependentUpon>Journal.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MoodHistory.resx">
+      <DependentUpon>MoodHistory.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MoodTracker.resx">
+      <DependentUpon>MoodTracker.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PairWithCounselor.resx">
+      <DependentUpon>PairWithCounselor.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SignIn.resx">
+      <DependentUpon>SignIn.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SignUp.resx">
+      <DependentUpon>SignUp.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ToDoHistory.resx">
+      <DependentUpon>ToDoHistory.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ToDoList.resx">
+      <DependentUpon>ToDoList.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.manifest" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <None Include="Resources\icons8-cancel-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-card-wallet-25.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-card-wallet-30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-close-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-close-window-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-dot-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-grinning-face-30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-happy-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-journal-25.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-journal-30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-logout-25.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-logout-30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-loudly-crying-face-25.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-loudly-crying-face-30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-neutral-face-25.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-neutral-face-30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-neutral-face-301.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-pensive-face-25.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-pensive-face-30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-rolling-on-the-floor-laughing-30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-slightly-smiling-face-30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-smile-emoticon-30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-smiling-face-with-heart-eyes-30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-to-do-list-25.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-to-do-list-30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-to-do-list-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-to-do-list-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-user-25.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-user-30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-zany-face-30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-logout-30 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-logout-20.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-consultation-25.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-consultation-25 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-find-30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-find-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-request-25.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-send-30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-send-30 %281%29.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <Import Project="packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.119.0\build\net46\Stub.System.Data.SQLite.Core.NetFramework.targets" Condition="Exists('packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.119.0\build\net46\Stub.System.Data.SQLite.Core.NetFramework.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.119.0\build\net46\Stub.System.Data.SQLite.Core.NetFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.119.0\build\net46\Stub.System.Data.SQLite.Core.NetFramework.targets'))" />
+  </Target>
+</Project>
